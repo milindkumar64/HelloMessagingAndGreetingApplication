@@ -18,4 +18,10 @@ public class HelloRestController {
         return "Hello "+name;
     }
 
+    //UC-3
+    @GetMapping(value = "/path/{name}")
+    public String path(@PathVariable String name){
+        return "Hello "+name;
+    }
+
 }
