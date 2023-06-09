@@ -23,5 +23,10 @@ public class HelloRestController {
     public String path(@PathVariable String name){
         return "Hello "+name;
     }
+    //UC-4
+    @PostMapping(value = "/add-person")
+    public Person addPerson(@RequestBody Person person){
+        return person;
+    }
 
 }
