@@ -12,4 +12,10 @@ public class HelloRestController {
         return "Hello from Bridgelabz !";
     }
 
+    //UC-2
+    @GetMapping(value = "/param")
+    public String param(@RequestParam String name){
+        return "Hello "+name;
+    }
+
 }
