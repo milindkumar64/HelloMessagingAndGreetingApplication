@@ -6,5 +6,10 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class HelloRestController {
 
+    //UC-1
+    @GetMapping(value = "/hello")
+    public String helloBridgelabz(){
+        return "Hello from Bridgelabz !";
+    }
 
 }
