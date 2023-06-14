@@ -3,6 +3,7 @@ package com.bridgelabz.HelloRestAPI.controller;
 import com.bridgelabz.HelloRestAPI.model.Greeting;
 import com.bridgelabz.HelloRestAPI.model.Users;
 import com.bridgelabz.HelloRestAPI.service.IGreetingService;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,5 +31,10 @@ public class GreetingController {
     @GetMapping("/greeting")
     public Greeting greeting1(@RequestParam(value = "name", defaultValue = "World!") String name){
         return new Greeting(counter.incrementAndGet(),String.format(template, name));
+    }
+    //UC3
+    @GetMapping("/greetingmessage")
+    public String greetingMessage(@RequestBody Users users){
+        return "Hello "+users.getFirstName()+"..."+users.getLastName();
     }
 }
