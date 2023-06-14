@@ -7,7 +7,6 @@ public class Person {
     String lName;
 
     public Person() {
-
     }
 
     public Person(String fName, String lName) {

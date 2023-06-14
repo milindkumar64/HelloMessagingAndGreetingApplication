@@ -1,7 +1,5 @@
 package com.bridgelabz.HelloRestAPI.model;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 @Entity
@@ -11,8 +9,14 @@ import lombok.Data;
 public class Greeting {
 
     @Id
+    //@GeneratedValue
+    @Column(name = "message-Id")
     private final long id;
+    @Column(name = "Greeting_message")
     private final String message;
 
-
+    public Greeting(){
+        id=0;
+        message="";
+    }
 }
